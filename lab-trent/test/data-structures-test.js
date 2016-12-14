@@ -65,4 +65,30 @@ describe('Data Structures', function() {
       });
     });
   });
+
+  describe('Queue', function() {
+    describe('#enqueue()', function() {
+      it('should add a value to the queue', function() {
+        let q = new Queue();
+        q.enqueue(2);
+        expect(q.head.value).to.equal(2);
+        expect(q.length).to.equal(1);
+      });
+      it('should add values to the queue and adjust tail and head accordingly', function() {
+        let q = new Queue();
+        q.enqueue(2);
+        q.enqueue(5);
+        q.enqueue(10);
+        expect(q.head.value).to.equal(2);
+        expect(q.tail.value).to.equal(10);
+        expect(q.length).to.equal(3);
+      });
+    });
+    describe('#dequeue()', function() {
+      it('should return and remove the value from the head of the queue', function() {
+        let q = new Queue([2, 3, 6, 12]);
+        expect(q.dequeue()).to.equal(2);
+      });
+    });
+  });
 });
