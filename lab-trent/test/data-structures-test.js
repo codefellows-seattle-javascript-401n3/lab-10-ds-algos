@@ -50,5 +50,19 @@ describe('Data Structures', function() {
         expect(s.pop()).to.equal('cats');
       });
     });
+    describe('#peek()', function() {
+      it('should return null when a stack is empty', function() {
+        let s = new Stack();
+        expect(s.peek()).to.equal(null);
+      });
+      it('should return the integer from the head of the stack', function() {
+        let s = new Stack([5, 2, 6, 10]);
+        expect(s.peek()).to.equal(10);
+      });
+      it('should return the string from the head of the stack', function() {
+        let s = new Stack(['cats', 'are', 'mean']);
+        expect(s.peek()).to.equal('mean');
+      });
+    });
   });
 });

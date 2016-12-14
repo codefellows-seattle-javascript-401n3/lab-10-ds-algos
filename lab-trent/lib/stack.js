@@ -33,7 +33,7 @@ Stack.prototype.pop = function() {
 
 Stack.prototype.peek = function() {
   if (!this.curr) {
-    throw new Error('Stack underflow.');
+    return null;
   }
   return this.curr.value;
 };
