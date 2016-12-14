@@ -1,21 +1,21 @@
 {
-  "name": "single-resource-api",
+  "name": "towers-of-hanoi",
   "version": "1.0.0",
-  "description": "An API that pulls from a single resource.",
+  "description": "Uses a stack to solve various towers of hanoi.",
   "main": "index.js",
   "scripts": {
     "test": "mocha"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/titandino/lab-08-single-resource-api.git"
+    "url": "git+https://github.com/titandino/lab-10-ds-algos.git"
   },
   "author": "Trenton Kress",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/titandino/lab-08-single-resource-api/issues"
+    "url": "https://github.com/titandino/lab-10-ds-algos/issues"
   },
-  "homepage": "https://github.com/titandino/lab-08-single-resource-api#readme",
+  "homepage": "https://github.com/titandino/lab-10-ds-algos#readme",
   "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-eslint": "^3.0.1",
@@ -23,6 +23,5 @@
     "mocha": "^3.1.2"
   },
   "dependencies": {
-    "uuid": "^3.0.1"
   }
 }
