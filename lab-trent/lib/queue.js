@@ -1,8 +1,15 @@
 'use strict';
 
-let Queue = module.exports = function() {
+const Node = require('./node');
+
+let Queue = module.exports = function(values) {
   this.head = null;
   this.tail = null;
+  if (values) {
+    values.forEach((val) => {
+      this.enqueue(val);
+    });
+  }
 };
 
 Queue.prototype.enqueue = function(val) {
@@ -16,7 +23,7 @@ Queue.prototype.enqueue = function(val) {
 };
 
 Queue.prototype.dequeue = function() {
-  let temp = this.head.val;
+  let temp = this.head.value;
   this.head = this.head.prev;
   return temp;
 };
