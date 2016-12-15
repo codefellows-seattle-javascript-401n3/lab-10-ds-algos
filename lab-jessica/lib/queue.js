@@ -17,15 +17,17 @@ Queue.prototype.enqueue = function(val) {
 };
 
 Queue.prototype.dequeue = function() {
-  let currentFront = this.front;
+  const currentFront = this.front;
 
-  if(this.front.prev) {
-    this.front = this.front.prev;
-    return currentFront.val;
-  } else if(this.front) {
+  if(this.front) {
+    if(this.front.prev) {
+      this.front = this.front.prev;
+      return currentFront.val;
+    }
     this.front = null;
     this.back = null;
     return currentFront.val;
   }
 
+  return this.front;
 };

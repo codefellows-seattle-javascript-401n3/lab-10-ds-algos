@@ -1,7 +1,7 @@
 const Stack = require('../lib/stack.js');
 const expect = require('chai').expect;
 
-describe('stack module', function() {
+describe('Stack module', function() {
   describe('.push()', function() {
     it('should add a new node to the top of the stack', function() {
       const st = new Stack();
