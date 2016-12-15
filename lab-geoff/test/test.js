@@ -37,8 +37,14 @@ describe('stack module', function() {
       let st = new Stack();
       expect(() => { st.pop(); }).to.throw(Error);
     });
-    it('something else', function() {
-      //
+    it('the size of the stack should decrease by one', function() {
+      let st = new Stack();
+      st.push(1);
+      st.push(2);
+      st.push(3);
+      let size = st.size;
+      st.pop();
+      expect(st.size).to.equal(size -1);
     });
   });
 });

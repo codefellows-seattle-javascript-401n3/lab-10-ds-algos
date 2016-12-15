@@ -14,17 +14,18 @@ Stack.prototype.push = function(val) {
   let node = new Node(val, this.top);
   this.top = node;
   this.size += 1;
-  //something to handle maxSize
 };
+
 Stack.prototype.pop = function() {
   if(!this.top) {
     throw new Error('Stack is empty');
   }
   let temp = this.top;
-  //assign temp.prev to top
-  //decrease size by one
+  this.top = temp.prev;
+  this.size -= 1;
   return temp.val;
 };
+
 Stack.prototype.peek = function() {
 
 };
