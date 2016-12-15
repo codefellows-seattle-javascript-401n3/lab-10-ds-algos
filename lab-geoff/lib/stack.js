@@ -17,6 +17,9 @@ Stack.prototype.push = function(val) {
   //something to handle maxSize
 };
 Stack.prototype.pop = function() {
+  if(!this.top) {
+    throw new Error('Stack is empty');
+  }
   let temp = this.top;
   //assign temp.prev to top
   //decrease size by one

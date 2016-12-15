@@ -21,9 +21,7 @@ describe('stack module', function() {
       let st = new Stack(2);
       st.push(2);
       st.push(3);
-      expect(() => {
-        st.push(4);
-      }).to.throw(Error);
+      expect(() => { st.push(4); }).to.throw(Error);
     });
   });
   describe('.pop() function', function() {
@@ -35,8 +33,9 @@ describe('stack module', function() {
       let val = st.pop();
       expect(val).to.equal(top);
     });
-    it('something', function() {
-      //
+    it('should throw an error when an empty stack calls pop', function() {
+      let st = new Stack();
+      expect(() => { st.pop(); }).to.throw(Error);
     });
     it('something else', function() {
       //
