@@ -1,7 +1,7 @@
 'use strict'
 
 let Node = require('../lib/node')
-let expect = require('chai').expect
+const expect = require('chai').expect
 
 describe('node module', function() {
   it('creates a new Node object', function() {

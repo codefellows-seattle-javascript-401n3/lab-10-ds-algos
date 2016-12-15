@@ -9,8 +9,14 @@ const Stack = module.exports = function(maxSize) {
 }
 
 Stack.prototype.push = function(val) {
-  this.top = new Node(val, this.top)
-  this.size ++
+  if ((typeof val) === 'string') {
+    if (this.size < this.maxSize || this.maxSize === null) {
+      this.top = new Node(val, this.top)
+      this.size ++
+      return
+    }
+  }
+  return Error
 }
 
 Stack.prototype.pop = function(){
