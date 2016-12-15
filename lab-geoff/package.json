@@ -1,0 +1,19 @@
+{
+  "name": "lab-geoff",
+  "version": "1.0.0",
+  "description": "Assignment for Lab 10. Stacks and Queue data structures. Towers of Hanoi code challenge.",
+  "main": "server.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha",
+    "start": "node server.js"
+  },
+  "author": "geoff-cox",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.2.0"
+  }
+}
