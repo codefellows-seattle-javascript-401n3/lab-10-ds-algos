@@ -17,8 +17,10 @@ describe('queue module', function() {
       queue.enqueue(2);
       expect(queue.front.prev).to.equal(queue.back);
     });
-    it('something', function() {
-      //expect
+    it('will assign a front and back to an empty node', function() {
+      let queue = new Queue();
+      queue.enqueue(2);
+      expect(this.front).to.equal(this.back);
     });
   });
   describe('.dequeue()', function() {
