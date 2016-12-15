@@ -19,5 +19,15 @@ Queue.prototype.enqueue = function(val) {
 };
 
 Queue.prototype.dequeue = function() {
-  // remove front node from queue
+  if(this.front) {
+    let temp = this.front;
+    if(this.front === this.back) {
+      this.front = null;
+      this.back = null;
+    } else {
+      this.front = temp.prev;
+    }
+    return temp.val;
+  }
+  return null;
 };
