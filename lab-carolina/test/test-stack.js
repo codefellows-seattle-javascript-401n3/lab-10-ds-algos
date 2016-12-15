@@ -26,7 +26,7 @@ describe('stack module', function(){
   });
 
 
-  describe('pop module', function(){
+  describe('.pop()', function(){
     it('should pop a node off the stack', function(){
       var st = new Stack();
       st.push(12);
@@ -41,12 +41,11 @@ describe('stack module', function(){
       var st = new Stack();
       st.push(1);
       st.push(2);
-      // st.pop();
       expect(st.pop()).to.equal(2);
     });
   });
 
-  describe('peek module', function(){
+  describe('.peek()', function(){
     it('should return the top node', function(){
       var st = new Stack();
       st.push(10);
