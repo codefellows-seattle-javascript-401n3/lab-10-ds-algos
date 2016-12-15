@@ -22,7 +22,7 @@ describe('stack module', function() {
       st.push(2);
       st.push(3);
       st.push(4);
-      expect(st.size).to.be.below(3);
+      expect(st.size).to.be.below(st.maxSize + 1);
     });
   });
 });

@@ -8,6 +8,9 @@ let Stack = module.exports = function(maxSize) {
 };
 
 Stack.prototype.push = function(val) {
+  if(this.size === this.maxSize) {
+    return console.log(`Current stack is full. Could not add ${val} to stack`);
+  }
   let node = new Node(val, this.top);
   this.top = node;
   this.size += 1;
