@@ -11,5 +11,11 @@ describe('stack module', function() {
       st.push(2);
       expect(st.top.val).to.equal(2);
     });
+    it('should increase in size when a new node is added', function() {
+      let st = new Stack(5);
+      let size = st.size;
+      st.push(5);
+      expect(st.size).to.equal(size += 1);
+    });
   });
 });
