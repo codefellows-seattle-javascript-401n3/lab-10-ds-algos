@@ -3,7 +3,7 @@
 const hanoi = require('./lib/hanoisolutions');
 const Stack = require('./lib/stack');
 
-let a = new Stack([5, 4, 3, 2, 1]);
+let a = new Stack([9, 8, 7, 6, 5, 4, 3, 2, 1]);
 let b = new Stack();
 let c = new Stack();
 
