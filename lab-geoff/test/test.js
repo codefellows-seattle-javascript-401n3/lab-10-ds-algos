@@ -1,7 +1,6 @@
 'use strict';
 
 let Stack = require('../lib/stack.js');
-// let assert = require('assert');
 let expect = require('chai').expect;
 
 describe('stack module', function() {
