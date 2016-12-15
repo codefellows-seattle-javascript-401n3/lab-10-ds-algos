@@ -12,6 +12,7 @@ function move(p1, p2) {
 }
 
 module.exports.solveHanoiIterative = function(start, mid, last) {
+  //Moves is 2^n meaning the Big O notation is O(2^n)
   let moves = Math.pow(2, start.length) - 1;
   if (start.length % 2 === 0) {
     let temp = mid;
