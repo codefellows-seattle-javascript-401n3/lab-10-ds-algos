@@ -27,5 +27,8 @@ Stack.prototype.pop = function() {
 };
 
 Stack.prototype.peek = function() {
-
+  if(!this.top) {
+    throw new Error('Stack is empty');
+  }
+  return this.top.val;
 };

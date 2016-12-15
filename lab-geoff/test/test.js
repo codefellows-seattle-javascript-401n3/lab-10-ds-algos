@@ -47,4 +47,27 @@ describe('stack module', function() {
       expect(st.size).to.equal(size -1);
     });
   });
+  describe('.peek()', function() {
+    it('should return the value of the top node', function() {
+      let st = new Stack();
+      st.push(1);
+      st.push(10);
+      st.push(9);
+      let val = 2;
+      st.push(val);
+      let peek = st.peek();
+      expect(peek).to.equal(val);
+    });
+    it('should not decrease the size of the stack', function() {
+      let st = new Stack();
+      st.push(5);
+      let size = st.size;
+      st.peek();
+      expect(st.size).to.equal(size);
+    });
+    it('should throw an error on an empty stack', function() {
+      let st = new Stack();
+      expect(() => st.peek()).to.throw(Error);
+    });
+  });
 });
