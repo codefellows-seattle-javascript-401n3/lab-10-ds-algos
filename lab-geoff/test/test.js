@@ -17,5 +17,12 @@ describe('stack module', function() {
       st.push(5);
       expect(st.size).to.equal(size += 1);
     });
+    it('should not allow the stack to exceed maxSize', function() {
+      let st = new Stack(2);
+      st.push(2);
+      st.push(3);
+      st.push(4);
+      expect(st.size).to.be.below(3);
+    });
   });
 });
