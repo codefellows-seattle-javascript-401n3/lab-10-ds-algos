@@ -26,4 +26,20 @@ describe('stack module', function() {
       }).to.throw(Error);
     });
   });
+  describe('.pop() function', function() {
+    it('should return the top value of the stack', function() {
+      let st = new Stack();
+      st.push(2);
+      st.push(10);
+      let top = st.top.val;
+      let val = st.pop();
+      expect(val).to.equal(top);
+    });
+    it('something', function() {
+      //
+    });
+    it('something else', function() {
+      //
+    });
+  });
 });
