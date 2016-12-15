@@ -10,20 +10,27 @@
 
 const Node = require('./node')
 
-const Stack = module.exports = function (maxSize) {
+const Stack = module.exports = function (array, maxSize) {
   this.HEAD = null,
-  this.currentSize = 0,
+  this.size = 0,
   this.maxSize = maxSize || null
+
+  if(array && Array.isArray(array)) {
+    array.forEach(value => {
+      this.push(value)
+    })
+  }
 }
 
 Stack.prototype.push = function (val) {
   // a new node is created with val and previousNode
   this.size += 1
+
   if (this.maxSize && this.size > this.maxSize) {
-    throw new Error('max stack size exceeded')
-  } else {
-    this.top = new Node(val, this.top)
+    throw new RangeError(`max stack size of ${this.maxSize} exceeded`)
   }
+
+  this.HEAD = new Node(val, this.HEAD)
 }
 
 Stack.prototype.pop = function () {
@@ -34,7 +41,7 @@ Stack.prototype.pop = function () {
   if (this.HEAD) {
     let temp = this.HEAD
     this.HEAD = this.HEAD.previousNode
-    this.currentSize -= 1
+    this.size -= 1
     return temp.value
   }
   return null

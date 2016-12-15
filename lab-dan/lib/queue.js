@@ -8,9 +8,15 @@
 const Node = require('./node')
 
 // queues don't typically have
-const Queue = module.exports = function () {
+const Queue = module.exports = function (array) {
   this.HEAD = null
   this.last = null
+
+  if(array && Array.isArray(array)) {
+    array.forEach(value => {
+      this.enqueue(value)
+    })
+  }
 }
 
 Queue.prototype.enqueue = function (value) {
@@ -19,7 +25,7 @@ Queue.prototype.enqueue = function (value) {
   // assign last node to the new node
   let node = new Node(value)
 
-  if (!this.last) {
+  if (!this.HEAD) {
     this.HEAD = node
     this.last = node
     this.HEAD.previousNode = this.last
