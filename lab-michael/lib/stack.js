@@ -1,4 +1,4 @@
-const Node = require('./node.js').Node;
+const Node = require('./node.js');
 
 const Stack = module.exports = function(maxSize) {
   this.top = null;
