@@ -8,13 +8,14 @@ let Stack = module.exports = function(maxSize) {
 };
 
 Stack.prototype.pop = function() {
-  //assign top to temp val
+  let temp = this.top;
   //assign temp.prev to top
   //decrease size by one
-  //return temp.val
+  return temp.val;
 };
 Stack.prototype.push = function() {
-
+  //add val to stack
+  //
 };
 Stack.prototype.peek = function() {
 
