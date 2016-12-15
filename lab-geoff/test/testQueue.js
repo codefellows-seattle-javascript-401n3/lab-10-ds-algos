@@ -24,6 +24,16 @@ describe('queue module', function() {
     });
   });
   describe('.dequeue()', function() {
+    it('will return null on an empty queue', function() {
+      let queue = new Queue();
+      let val = queue.dequeue();
+      expect(val).to.equal(null);
+    });
+    it('', function() {
 
+    });
+    it('', function() {
+
+    });
   });
 });
