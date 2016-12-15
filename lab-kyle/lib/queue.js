@@ -1,6 +1,6 @@
 'use strict'
 
-const Node = require('.node')
+const Node = require('./node')
 
 const Queue = module.exports = function() {
   this.front = null
@@ -23,13 +23,15 @@ Queue.prototype.enqueue = function(val) {
 Queue.prototype.dequeue = function() {
   let currentFront = this.front
 
-  if(this.front.prev) {
-    this.front = this.front.prev
-    return currentFront.val
-  } else if(this.front) {
-    this.front = null
-    this.back = null
-    return currentFront.val
+  if(this.front) {
+    if(this.front.prev) {
+      this.front = this.front.prev
+      return currentFront.val
+    } else {
+      this.front = null
+      this.back = null
+      return currentFront.val
+    }
   }
-  return null
+  return this.front
 };
