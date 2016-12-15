@@ -7,15 +7,15 @@ let Stack = module.exports = function(maxSize) {
   this.size = 0;
 };
 
+Stack.prototype.push = function(val) {
+  let node = new Node(val);
+  this.top = node;
+};
 Stack.prototype.pop = function() {
   let temp = this.top;
   //assign temp.prev to top
   //decrease size by one
   return temp.val;
-};
-Stack.prototype.push = function() {
-  //add val to stack
-  //
 };
 Stack.prototype.peek = function() {
 
