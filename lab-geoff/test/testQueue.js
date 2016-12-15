@@ -29,8 +29,14 @@ describe('queue module', function() {
       let val = queue.dequeue();
       expect(val).to.equal(null);
     });
-    it('', function() {
-
+    it('should return the value of the node at the front of queue', function() {
+      let queue = new Queue();
+      queue.enqueue(10);
+      let frontVal = queue.front.val;
+      queue.enqueue(9);
+      queue.enqueue(8);
+      let val = queue.dequeue();
+      expect(val).to.equal(frontVal);
     });
     it('', function() {
 
