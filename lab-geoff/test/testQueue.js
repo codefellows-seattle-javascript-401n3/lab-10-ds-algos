@@ -5,11 +5,20 @@ let Queue = require('../lib/queue.js');
 
 describe('queue module', function() {
   describe('.enqueue()', function() {
-    it('will add a new node to the front of the queue', function() {
+    it('will add a new node to the back of the queue', function() {
       let queue = new Queue();
       let val = 1;
       queue.enqueue(val);
-      expect(queue.front).to.equal(val);
+      expect(queue.back.val).to.equal(val);
+    });
+    it('will assign the new node as the previous node to the current back', function() {
+      let queue = new Queue();
+      queue.enqueue(1);
+      queue.enqueue(2);
+      expect(queue.front.prev).to.equal(queue.back);
+    });
+    it('something', function() {
+      //expect
     });
   });
   describe('.dequeue()', function() {

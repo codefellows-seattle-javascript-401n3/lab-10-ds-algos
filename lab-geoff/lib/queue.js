@@ -7,8 +7,15 @@ let Queue = module.exports = function() {
   this.back = null;
 };
 
-Queue.prototype.enqueue = function() {
-  // add new node to queue
+Queue.prototype.enqueue = function(val) {
+  let node = new Node(val);
+  if(!this.front) {
+    this.front = node;
+    this.back = node;
+    return;
+  }
+  this.back.prev = node;
+  this.back = node;
 };
 
 Queue.prototype.dequeue = function() {
