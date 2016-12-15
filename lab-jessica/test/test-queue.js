@@ -1,3 +1,5 @@
+'use strict';
+
 const Queue = require('../lib/queue.js');
 const expect = require('chai').expect;
 
@@ -23,23 +25,6 @@ describe('Queue module', function() {
       expect(q.front.val).to.equal(1);
     });
   });
-
-  // Queue.prototype.dequeue = function() {
-  //   const currentFront = this.front;
-  //
-  //   if(this.front) {
-  //     if(this.front.prev) {
-  //       this.front = this.front.prev;
-  //       return currentFront.val;
-  //     } else if(this.front) {
-  //       this.front = null;
-  //       this.back = null;
-  //       return currentFront;
-  //     }
-  //   }
-  //
-  //   return this.front;
-  // };
 
   describe('.dequeue()', function() {
     it('should return null if queue is empty', function() {

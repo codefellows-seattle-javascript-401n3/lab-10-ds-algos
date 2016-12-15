@@ -1,3 +1,5 @@
+'use strict';
+
 const Stack = require('../lib/stack.js');
 const expect = require('chai').expect;
 

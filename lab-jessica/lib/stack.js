@@ -1,3 +1,5 @@
+'use strict';
+
 const Node = require('./node.js');
 
 const Stack = module.exports = function(maxSize) {
