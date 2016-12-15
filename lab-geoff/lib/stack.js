@@ -10,6 +10,7 @@ let Stack = module.exports = function(maxSize) {
 Stack.prototype.push = function(val) {
   let node = new Node(val);
   this.top = node;
+  this.size += 1;
 };
 Stack.prototype.pop = function() {
   let temp = this.top;
