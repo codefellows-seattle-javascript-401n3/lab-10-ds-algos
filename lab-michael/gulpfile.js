@@ -7,11 +7,11 @@ const mocha = require('gulp-mocha');
 
 
 gulp.task('welcome', function() {
-  console.log('Welcome to the Single Resource API');
+  console.log('Hanoi Towers');
 });
 
 gulp.task('test', function() {
-  gulp.src('./test/test-*.js', {read: false})
+  gulp.src('./test/*-test.js', {read: false})
   .pipe(mocha({reporter: 'nyan'}));
 });
 
