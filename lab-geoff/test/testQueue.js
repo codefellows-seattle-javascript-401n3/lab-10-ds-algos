@@ -38,8 +38,13 @@ describe('queue module', function() {
       let val = queue.dequeue();
       expect(val).to.equal(frontVal);
     });
-    it('', function() {
-
+    it('should assign the next value in queue to front', function() {
+      let queue = new Queue();
+      queue.enqueue(10);
+      queue.enqueue(15);
+      let prev = queue.front.prev;
+      queue.dequeue();
+      expect(queue.front).to.equal(prev);
     });
   });
 });
