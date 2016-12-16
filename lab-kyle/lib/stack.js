@@ -9,7 +9,7 @@ const Stack = module.exports = function(maxSize) {
 }
 
 Stack.prototype.push = function(val) {
-  if ((typeof val) === 'string') {
+  if ((typeof val) === 'number') {
     if (this.size < this.maxSize || this.maxSize === null) {
       this.top = new Node(val, this.top)
       this.size ++
