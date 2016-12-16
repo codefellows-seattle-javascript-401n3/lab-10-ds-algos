@@ -15,9 +15,9 @@ describe('queue model', function() {
     });
     it('should add an incoming connection to the end of queue', function(){
       let q = new Queue();
-      q.enqueue(25);
+      q.enqueue(1);
       console.log(q);
-      expect(q.back.val).to.equal(25);
+      expect(q.back.val).to.equal(1);
       // expect(q.front.prev).to.equal(null);
       // console.log(q.back.val);
 
