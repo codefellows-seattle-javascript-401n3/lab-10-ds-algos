@@ -40,34 +40,25 @@ function moveSmallestDisk() {
 // the smaller of the two will be moved to the top of the other
 // what about null tops?
 // if one of the stacks is null we will move to that stack
-function nextSmallestDisk() {
+function moveNextSmallestDisk() {
   const compArr = [{stack: stacks[0], index: 0}, {stack: stacks[1], index: 1}, {stack: stacks[2], index: 2}];
   compArr.splice(currentIndex, 1);
 // stacks.splice(currentIndex, 1); //this was changing original stacks arr
   if(compArr[0].stack.top === null) {
     const smallerVal = stacks[compArr[1].index].pop();
-    console.log('val popped', smallerVal);
     stacks[compArr[0].index].push(smallerVal);
-    console.log(stacks);
     return;
   } else if(compArr[1].stack.top === null) {
     const smallerVal = stacks[compArr[0].index].pop();
-    console.log('val popped', smallerVal);
     stacks[compArr[1].index].push(smallerVal);
-    console.log(stacks);
     return;
   } else if(compArr[0].stack.top.val < compArr[1].stack.top.val ) {
     const smallerVal = stacks[compArr[0].index].pop();
-    console.log('val popped', smallerVal);
     stacks[compArr[1].index].push(smallerVal);
-    console.log(stacks);
-    // console.log(stacks[2].top.prev);
     return;
   } else {
     const smallerVal = stacks[compArr[1].index].pop();
-    console.log('val popped', smallerVal);
     stacks[compArr[0].index].push(smallerVal);
-    console.log(stacks);
   }
 }
 
@@ -75,13 +66,12 @@ function runChallenge(numDisks) {
 
   createTowerA(numDisks);
 
-  while (stacks[1].size !== numDisks || stacks[2].size !== numDisks) {
-    console.log(counter);
+  while (stacks[1].size !== numDisks && stacks[2].size !== numDisks) {
     if(counter % 2 === 0) {
       moveSmallestDisk();
       counter ++;
     } else {
-      nextSmallestDisk();
+      moveNextSmallestDisk();
       counter ++;
     }
   }
@@ -89,4 +79,4 @@ function runChallenge(numDisks) {
   console.log('final counter', counter);
 }
 
-runChallenge(3);
+runChallenge(15);
