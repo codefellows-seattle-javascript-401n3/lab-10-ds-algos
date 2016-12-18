@@ -15,7 +15,7 @@ function start() {
     throw new Error('improper argument or missing require flag. Please use "-q" or "-s".')
   }
   if (process.argv[2] === '-i') {
-    options[process.argv[2]](Stack, 3)
+    options[process.argv[2]](Stack, +process.argv[3])
   } else {
     let choice = options[process.argv[2]]
     let array = process.argv[3] ? process.argv[3].split(',').map(char => +char) : null
