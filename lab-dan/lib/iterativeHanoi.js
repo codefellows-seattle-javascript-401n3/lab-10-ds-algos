@@ -1,9 +1,12 @@
 'use strict'
 
-const iterativeHanoi = module.exports = function(Stack, n) {
+module.exports = function(Stack, n) {
   let stack1 = new Stack()
   let stack2 = new Stack()
   let stack3 = new Stack()
+  let moves = null
+
+  if(typeof n !== 'number') throw new Error('n must be an integer!')
 
   for(let i = n; i > 0; i--) {
     stack1.push(i)
@@ -11,9 +14,17 @@ const iterativeHanoi = module.exports = function(Stack, n) {
   print(stack1, stack2, stack3, n, 'Initial Tower Built')
 
   if(n % 2 === 0) {
-    solveEvenHanoi(stack1, stack2, stack3, n)
+    moves = solveEvenHanoi(stack1, stack2, stack3, n)
   } else {
-    solveOddHanoi(stack1, stack2, stack3, n)
+    moves = solveOddHanoi(stack1, stack2, stack3, n)
+  }
+
+  // for testing purposes
+  return {
+    stack1: stack1,
+    stack2: stack2,
+    stack3: stack3,
+    moves: moves,
   }
 
 }
@@ -69,7 +80,7 @@ function solveEvenHanoi(stack1, stack2, stack3, n) {
     }
     moves++
   }
-  return
+  return moves
 }
 
 function solveOddHanoi(stack1, stack2, stack3, n) {
@@ -107,7 +118,7 @@ function solveOddHanoi(stack1, stack2, stack3, n) {
     }
     moves++
   }
-  return
+  return moves
 }
 
 function isLegalMove(firstStack, secondStack) {
