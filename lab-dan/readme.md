@@ -7,4 +7,7 @@ The ```index.js``` allows you to "run" this from the command line, using one of 
 
 Additionally, from the command line you can input a series of values as comma separated values in a string as your second argument to automatically generate your data structure with values and a 3rd argument of maxSize to define the maxSize of your stack (the queue will simply ignore this argument).
 
+###Tower of Hanoi###
+There is also an implementation of Tower of Hanoi in this, which uses the stack module. Right now you can try out the iterative solution. You can also run this from the command line using ```node index.js -i n```. ```n``` should be an integer for how big of a tower you want to solve. The ```-i``` flag stands for iterative, in case you were wondering.
+
 _As a side note, due to time, the tests do not cover the automatically created data structures via array. I'll need to return to that when I am able!_
