@@ -1,3 +1,5 @@
+'use strict'
+
 const expect = require('chai').expect
 const Stack = require('../lib/stack')
 const iterativeHanoi = require('../lib/iterativeHanoi')
