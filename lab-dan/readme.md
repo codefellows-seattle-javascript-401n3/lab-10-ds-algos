@@ -10,4 +10,7 @@ Additionally, from the command line you can input a series of values as comma se
 ###Tower of Hanoi###
 There is also an implementation of Tower of Hanoi in this, which uses the stack module. Right now you can try out the iterative solution. You can also run this from the command line using ```node index.js -i n```. ```n``` should be an integer for how big of a tower you want to solve. The ```-i``` flag stands for iterative, in case you were wondering.
 
+####Tower of Hanoi Big O####
+The Big O for stacks and queues is linear, at worst, because you have to add each value in some sort of for loop fashion. For the Tower of Hanoi, the Big O is based on the number of moves. This iterative solution solves the problem in the minimal number of steps, which is 2^n - 1. Thus it can be deduced that the Big O is O(2^n), or exponential.
+
 _As a side note, due to time, the tests do not cover the automatically created data structures via array. I'll need to return to that when I am able!_
