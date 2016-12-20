@@ -11,6 +11,7 @@ Instantiate a new node `new Node(val, [prev])`
 ### Properties
 
 val: Pass this value in when instantiating. Only numbers are allowed.
+
 prev: Optional, references previous node and will default to null if not passed in.
 
 ## Stack Module
