@@ -1,0 +1,17 @@
+{
+  "name": "stack-and-queue-module",
+  "version": "1.0.0",
+  "description": "This is an implementation of stacks and queues plus tests",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "Dan Peters",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^3.5.0"
+  }
+}
