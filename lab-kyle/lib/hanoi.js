@@ -2,15 +2,15 @@
 
 const Stack = require('./stack')
 
-// create 3 towers
-let a = new Stack()
-let b = new Stack()
-let c = new Stack()
-
-let turns = 0
-
 let hanoi = module.exports = function(n) {
+  let a = new Stack()
+  let b = new Stack()
+  let c = new Stack()
+
+  let turns = 0
+
   initStackA(n)
+
   if (typeof n === 'number') {
     while (b.size < n && c.size < n) {
       if (n % 2 === 0) {
@@ -23,10 +23,9 @@ let hanoi = module.exports = function(n) {
         bc()
       }
     }
-    // console.log(turns)
-    // console.log(a.size, b.size, c.size)
-    return [turns, [a.size, b.size, c.size]]
+    return [turns, [a, b, c]]
   }
+
 
   function initStackA(n) {
     while(n) {
@@ -78,5 +77,4 @@ let hanoi = module.exports = function(n) {
   }
 
   return Error
-
 }
