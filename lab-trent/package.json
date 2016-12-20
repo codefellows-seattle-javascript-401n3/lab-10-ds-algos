@@ -1,0 +1,27 @@
+{
+  "name": "towers-of-hanoi",
+  "version": "1.0.0",
+  "description": "Uses a stack to solve various towers of hanoi.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/titandino/lab-10-ds-algos.git"
+  },
+  "author": "Trenton Kress",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/titandino/lab-10-ds-algos/issues"
+  },
+  "homepage": "https://github.com/titandino/lab-10-ds-algos#readme",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "gulp": "^3.9.1",
+    "gulp-eslint": "^3.0.1",
+    "gulp-mocha": "^3.0.1",
+    "mocha": "^3.1.2"
+  },
+  "dependencies": {}
+}
