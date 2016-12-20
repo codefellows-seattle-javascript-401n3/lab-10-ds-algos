@@ -9,26 +9,26 @@ describe('stack module', function() {
   describe('.push', function() {
     it('should add a new node to the top of the stack', function() {
       let st = new Stack()
-      st.push('hello')
-      expect(st.top.val).to.equal('hello')
+      st.push(1)
+      expect(st.top.val).to.equal(1)
       expect(st.top.prev).to.equal(null)
     })
     it('should throw error when maxSize is exceeded', function() {
-      let st = new Stack('hello')
-      st.push('hello')
-      expect(st.push('world')).to.equal(Error)
+      let st = new Stack(1)
+      st.push(1)
+      expect(st.push(2)).to.equal(Error)
     })
-    it('should allow only strings to be added to the stack', function() {
+    it('should allow only numbers to be added to the stack', function() {
       let st = new Stack()
-      st.push('pass')
-      assert.typeOf(st.top.val, 'string')
-      expect(st.push(15)).to.equal(Error)
+      st.push(5)
+      assert.typeOf(st.top.val, 'number')
+      expect(st.push('15')).to.equal(Error)
     })
     it('should increase the size of the stack by one', function() {
       let st = new Stack()
-      st.push('first')
+      st.push(1)
       expect(st.size).to.equal(1)
-      st.push('second')
+      st.push(2)
       expect(st.size).to.equal(2)
     })
   })
@@ -36,9 +36,9 @@ describe('stack module', function() {
   describe('.pop', function() {
     it('should return a node from the top of the stack', function() {
       let st = new Stack()
-      st.push('test')
-      st.push('test 2: Electric Boogaloo')
-      expect(st.pop()).to.equal('test 2: Electric Boogaloo')
+      st.push(1)
+      st.push(2)
+      expect(st.pop()).to.equal(2)
     })
     it('should return null if there is nothing on the stack', function() {
       let st = new Stack()
@@ -46,8 +46,8 @@ describe('stack module', function() {
     })
     it('should reduce the size of the stack by one', function() {
       let st = new Stack()
-      st.push('first')
-      st.push('second')
+      st.push(1)
+      st.push(2)
       st.pop()
       expect(st.size).to.equal(1)
     })
@@ -56,14 +56,14 @@ describe('stack module', function() {
   describe('.peek', function() {
     it('should return the value of the top node in the stack', function() {
       let st = new Stack()
-      st.push('hello')
-      st.push('world')
-      expect(st.peek()).to.equal('world')
+      st.push(1)
+      st.push(2)
+      expect(st.peek()).to.equal(2)
     })
-    it('should return a string if there something in the stack', function() {
+    it('should return a number if there something in the stack', function() {
       let st = new Stack()
-      st.push('test')
-      assert.typeOf(st.top.val, 'string')
+      st.push(17)
+      assert.typeOf(st.top.val, 'number')
     })
     it('should return null if the stack is empty', function() {
       let st = new Stack()
