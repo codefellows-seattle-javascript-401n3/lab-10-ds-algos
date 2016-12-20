@@ -53,7 +53,13 @@ back: References the back node. Defaults to null.
 
 ## Challenge Module - Towers of Hanoi
 
+### Run
 
+The following command will run the challenge with n disks. N may be any number.
+
+`node index.js n`
+
+This command will return the total number of moves needed to complete the [Towers of Hanoi] (https://en.wikipedia.org/wiki/Tower_of_Hanoi) in the least amount moves as well as the final stacks.
 
 ### Challenge Methods
 
