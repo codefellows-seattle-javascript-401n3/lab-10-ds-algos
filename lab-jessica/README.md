@@ -16,7 +16,9 @@ prev: Optional, references previous node and will default to null if not passed 
 
 ## Stack Module
 
-Instantiate a stack ```new Stack([maxSize])```
+Instantiate a stack ```new Stack([maxSize], [arr])```
+
+Passing in an array is optional. If passed in, each value will be pushed on to the stack.
 
 ### Properties
 
@@ -37,7 +39,9 @@ size: Number of nodes on the stack. Defaults to 0.
 
 ## Queue Module
 
-Instantiate a queue ```new Queue()```
+Instantiate a queue ```new Queue([arr])```
+
+Passing in an array is optional. If passed in, each value will be enqueued.
 
 ###Properties
 
