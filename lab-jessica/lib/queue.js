@@ -2,9 +2,15 @@
 
 const Node = require('./node.js');
 
-const Queue = module.exports = function() {
+const Queue = module.exports = function(arr) {
   this.front = null;
   this.back = null;
+
+  if(Array.isArray(arr)) {
+    arr.forEach(ele => {
+      this.enqueue(ele);
+    });
+  }
 };
 
 Queue.prototype.enqueue = function(val) {

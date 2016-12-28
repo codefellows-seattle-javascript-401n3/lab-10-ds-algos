@@ -17,11 +17,12 @@ exports.moveSmallestDisk = function(arr) {
   if(currentIndex !== 2) {
     arr[currentIndex + 1].push(1);
     currentIndex ++;
-    return;
+    return currentIndex;
   }
 
   arr[0].push(1);
   currentIndex = 0;
+  return currentIndex;
 };
 
 exports.moveNextSmallestDisk = function(arr) {
@@ -66,6 +67,5 @@ exports.runChallenge = function(numDisks) {
 
   console.log('final stacks', stacks);
   console.log('final counter', counter);
+  return [stacks, counter];
 };
-
-exports.runChallenge(6);
